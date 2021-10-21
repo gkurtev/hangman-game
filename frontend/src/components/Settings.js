@@ -1,11 +1,9 @@
 import { Link } from 'react-router-dom';
-import { useStore } from 'react-context-hook';
 import React from 'react';
-import { storeRemoveCategory } from '../actions/store-actions';
+import AddCategory from './AddCategory';
+import EditableCategories from './EditableCategories';
 
 function Settings() {
-  const [challenges] = useStore('challenges', []);
-
   return (
     <div className='settings'>
       <div className='settings__inner'>
@@ -15,20 +13,13 @@ function Settings() {
           </div>
 
           <div className='settings__body'>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, excepturi.</p>
+            <EditableCategories />
           </div>
 
           <div className='settings__actions'>
             <Link to='/'>Back</Link>
-          </div>
 
-          <div className='settings__counter'>
-            {challenges.map((data) => (
-              <li key={data.id}>
-                <div>{data.category}</div>
-                <button onClick={() => storeRemoveCategory(data.id)}>Remove</button>
-              </li>
-            ))}
+            <AddCategory />
           </div>
         </div>
       </div>

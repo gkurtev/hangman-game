@@ -3,12 +3,148 @@
     {
       "id": 1,
       "category": "Food",
-      "challenges": ["apple", "oranges", "lemons"]
+      "words": [
+        "apple",
+        "oranges",
+        "lemons"
+      ]
     },
     {
       "id": 2,
       "category": "Things",
-      "challenges": ["thing1", "thing2", "thing3"]
+      "words": [
+        "thing1",
+        "thing2",
+        "thing3"
+      ]
+    },
+    {
+      "id": 196.37470535171576,
+      "category": "pedal",
+      "words": [
+        "asdjasdj",
+        "asdd"
+      ]
+    },
+    {
+      "id": 444.4802472654017,
+      "category": "uno",
+      "words": [
+        "dos",
+        "tres"
+      ]
+    },
+    {
+      "id": 88.75835572102942,
+      "category": "sdfsd",
+      "words": [
+        "asd"
+      ]
+    },
+    {
+      "id": 204.43363938869408,
+      "category": "whaaa",
+      "words": [
+        "skup",
+        "mup"
+      ]
+    },
+    {
+      "id": 30.52188185931137,
+      "category": "Mindili",
+      "words": [
+        "Pesho",
+        "Ivan",
+        "Geio"
+      ]
+    },
+    {
+      "id": 687.5533390177277,
+      "category": "sjsjsjssj",
+      "words": [
+        "asda"
+      ]
+    },
+    {
+      "id": 238.67755054076457,
+      "category": "teb",
+      "words": [
+        "nedelcho",
+        "mani"
+      ]
+    },
+    {
+      "id": 231.39920243717006,
+      "category": "kvo",
+      "words": [
+        "razlika"
+      ]
+    },
+    {
+      "id": 528.6611827161291,
+      "category": "shall we rock",
+      "words": [
+        "with",
+        "the",
+        "orchestra?"
+      ]
+    },
+    {
+      "id": 238.36553733021847,
+      "category": "aaaa",
+      "words": [
+        "asd",
+        "123",
+        "a"
+      ]
+    },
+    {
+      "id": 149.71076780113268,
+      "category": "hmm",
+      "words": [
+        "asd",
+        "yjyjy",
+        "a"
+      ]
+    },
+    {
+      "id": 493.4572180894172,
+      "category": "sssss",
+      "words": [
+        "asdjad",
+        "asd"
+      ]
+    },
+    {
+      "id": 684.1259664140249,
+      "category": "deiba",
+      "words": [
+        "dba"
+      ]
+    },
+    {
+      "id": 418.9686283665919,
+      "category": "sssssdffff",
+      "words": [
+        "sdf",
+        "bkkkkk",
+        "asd"
+      ]
+    },
+    {
+      "id": 684.6736010805386,
+      "category": "selin",
+      "words": [
+        "shta iva",
+        "v guza"
+      ]
+    },
+    {
+      "id": 288.16805666088885,
+      "category": "last",
+      "words": [
+        "samura"
+      ]
     }
   ]
 }
