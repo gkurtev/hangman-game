@@ -4,7 +4,7 @@ import React from 'react';
 import { storeRemoveCategory } from '../actions/store-actions';
 
 function Settings() {
-  const [hangmanData] = useStore('hangmanData', []);
+  const [challenges] = useStore('challenges', []);
 
   return (
     <div className='settings'>
@@ -23,7 +23,7 @@ function Settings() {
           </div>
 
           <div className='settings__counter'>
-            {hangmanData.map((data) => (
+            {challenges.map((data) => (
               <li key={data.id}>
                 <div>{data.category}</div>
                 <button onClick={() => storeRemoveCategory(data.id)}>Remove</button>

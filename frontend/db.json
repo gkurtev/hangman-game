@@ -1,0 +1,14 @@
+{
+  "challenges": [
+    {
+      "id": 1,
+      "category": "Food",
+      "challenges": ["apple", "oranges", "lemons"]
+    },
+    {
+      "id": 2,
+      "category": "Things",
+      "challenges": ["thing1", "thing2", "thing3"]
+    }
+  ]
+}

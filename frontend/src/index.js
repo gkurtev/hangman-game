@@ -2,13 +2,17 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import { withStore } from 'react-context-hook';
+import { withStore, store } from 'react-context-hook';
 import React from 'react';
-import { dummyData } from './data/dummy-data';
+import { fetchData } from './actions/store-actions';
 
 const initialValue = {
-  hangmanData: dummyData,
+  challenges: [],
 };
+
+fetchData().then((jsonData) => {
+  store.set('challenges', jsonData);
+});
 
 const AppWithStore = withStore(App, initialValue);
 
