@@ -13,6 +13,18 @@ export const fetchData = async () => {
   return data;
 };
 
+export const dbUpdateWords = async (wordsData, id) => {
+  const response = await fetch(`http://localhost:5000/challenges/${id}`, {
+    method: 'PATCH',
+    body: JSON.stringify(wordsData),
+    headers: {
+      'Content-type': 'application/json; charset=UTF-8',
+    },
+  });
+
+  return response;
+};
+
 export const postChallenge = async (data) => {
   const response = await fetch('http://localhost:5000/challenges', {
     method: 'POST',
