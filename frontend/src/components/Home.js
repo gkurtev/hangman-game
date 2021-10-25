@@ -12,7 +12,7 @@ function Home() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, excepturi.</p>
           </div>
           <div className='home__actions'>
-            <Button classes='btn--link' text='Play' type='link' url='/' />
+            <Button classes='btn--link' text='Play' type='link' url='/select' />
 
             <Button classes='btn--link btn--blue' text='Settings' type='link' url='/settings' />
           </div>

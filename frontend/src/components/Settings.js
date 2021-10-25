@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
 import React from 'react';
 import AddCategory from './AddCategory';
 import EditableCategories from './EditableCategories';
+import Button from './Button';
 
 function Settings() {
   return (
@@ -17,7 +17,9 @@ function Settings() {
           </div>
 
           <div className='settings__actions'>
-            <Link to='/'>Back</Link>
+            <Button type='link' url='/'>
+              Back
+            </Button>
 
             <AddCategory />
           </div>
