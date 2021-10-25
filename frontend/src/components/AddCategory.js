@@ -12,14 +12,16 @@ function AddCategory() {
 
     const formData = serializeForm(event.target);
 
-    dbPostChallenge(formData).then((res) => {
-      if (res.status === 201) {
-        addChallenge(formData);
-        setShowCategory(false);
-      } else {
-        console.log('error category was not added');
-      }
-    });
+    if (formData.category && formData.words.length) {
+      dbPostChallenge(formData).then((res) => {
+        if (res.status === 201) {
+          addChallenge(formData);
+          setShowCategory(false);
+        } else {
+          console.log('error category was not added');
+        }
+      });
+    }
   };
 
   return (

@@ -2,6 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import { storeRemoveCategory } from '../actions/store-actions';
 import { dbDeleteCategory, dbUpdateWords } from '../api-calls/db-requests';
+import Button from './Button';
 import './EditableCategories.css';
 
 function EditableCategorie(props) {
@@ -20,7 +21,7 @@ function EditableCategorie(props) {
           >
             <span>{word}</span>
 
-            <button onClick={() => removeWord(word)}>x</button>
+            <Button action={() => removeWord(word)}>x</Button>
           </div>
         </li>
       );
@@ -95,7 +96,7 @@ function EditableCategorie(props) {
         >
           <h6 className='editable-categorie__title'>{challenge.category}</h6>
 
-          <button onClick={removeCategory}>remove category</button>
+          <Button action={removeCategory}>remove category</Button>
         </div>
       </div>
 
@@ -113,11 +114,11 @@ function EditableCategorie(props) {
               onChange={(e) => setWordValue(e.target.value)}
             />
 
-            <button onClick={addWord}>Add word</button>
-            <button onClick={closeAddWordForm}>Cancel</button>
+            <Button action={addWord}>Add word</Button>
+            <Button action={closeAddWordForm}>Cancel</Button>
           </div>
         ) : (
-          <button onClick={openAddWordForm}>Add word</button>
+          <Button action={openAddWordForm}>Add word</Button>
         )}
       </div>
     </div>
