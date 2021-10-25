@@ -4,13 +4,13 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { withStore, store } from 'react-context-hook';
 import React from 'react';
-import { fetchData } from './actions/store-actions';
+import { dbFetchData } from './api-calls/db-requests';
 
 const initialValue = {
   challenges: [],
 };
 
-fetchData().then((jsonData) => {
+dbFetchData().then((jsonData) => {
   store.set('challenges', jsonData);
 });
 

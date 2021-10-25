@@ -1,5 +1,6 @@
 import { useState } from 'react';
-import { addChallenge, postChallenge } from '../actions/store-actions';
+import { addChallenge } from '../actions/store-actions';
+import { dbPostChallenge } from '../api-calls/db-requests';
 import { serializeForm } from '../helpers/utils';
 
 function AddCategory() {
@@ -10,7 +11,7 @@ function AddCategory() {
 
     const formData = serializeForm(event.target);
 
-    postChallenge(formData).then((res) => {
+    dbPostChallenge(formData).then((res) => {
       if (res.status === 201) {
         addChallenge(formData);
         setShowCategory(false);

@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
-import { dbUpdateWords } from '../actions/store-actions';
+import { storeRemoveCategory } from '../actions/store-actions';
+import { dbDeleteCategory, dbUpdateWords } from '../api-calls/db-requests';
+import './EditableCategories.css';
 
 function EditableCategorie(props) {
   const { challenge } = props;
@@ -14,7 +16,7 @@ function EditableCategorie(props) {
         <li key={index}>
           <div
             className='editable-categories__word'
-            style={{ display: 'flex', justifyContent: 'space-between', maxWidth: 300 }}
+            style={{ display: 'flex', justifyContent: 'space-between' }}
           >
             <span>{word}</span>
 
@@ -36,7 +38,14 @@ function EditableCategorie(props) {
     };
 
     dbUpdateWords(wordsData, challenge.id).then((res) => {
-      if (res.status === 200) setwordsArray(newWordsArray);
+      if (res.status === 200) {
+        setwordsArray(newWordsArray);
+
+        console.log(wordsArray.length);
+        if (wordsArray.length <= 1) {
+          removeCategory();
+        }
+      }
     });
   };
 
@@ -69,10 +78,25 @@ function EditableCategorie(props) {
     setWordValue('');
   };
 
+  const removeCategory = () => {
+    dbDeleteCategory(challenge.id).then((res) => {
+      if (res.status === 200) {
+        storeRemoveCategory(challenge.id);
+      }
+    });
+  };
+
   return (
     <div className='editable-categorie'>
       <div className='editable-categorie__head'>
-        <p>{challenge.category}</p>
+        <div
+          className='editable-categorie__head__inner'
+          style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}
+        >
+          <h6 className='editable-categorie__title'>{challenge.category}</h6>
+
+          <button onClick={removeCategory}>remove category</button>
+        </div>
       </div>
 
       <div className='editable-categories__body'>
