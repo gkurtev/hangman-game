@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './components/Home';
 import Settings from './components/Settings';
 import SelectCategory from './components/SelectCategory';
+import Play from './components/Play';
 
 function App() {
   return (
@@ -19,6 +20,10 @@ function App() {
 
           <Route path='/select'>
             <SelectCategory />
+          </Route>
+
+          <Route path='/play/:id'>
+            <Play />
           </Route>
         </Switch>
       </Router>
