@@ -1,4 +1,4 @@
-import { Link } from 'react-router-dom';
+import Button from './Button';
 
 function Home() {
   return (
@@ -12,9 +12,9 @@ function Home() {
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio, excepturi.</p>
           </div>
           <div className='home__actions'>
-            <Link to='/'>Play</Link>
+            <Button classes='btn--link' text='Play' type='link' url='/' />
 
-            <Link to='/settings'>Settings</Link>
+            <Button classes='btn--link btn--blue' text='Settings' type='link' url='/settings' />
           </div>
         </div>
       </div>

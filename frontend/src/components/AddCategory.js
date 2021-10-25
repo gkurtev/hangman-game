@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { addChallenge } from '../actions/store-actions';
 import { dbPostChallenge } from '../api-calls/db-requests';
 import { serializeForm } from '../helpers/utils';
+import Button from './Button';
 
 function AddCategory() {
   const [showCategory, setShowCategory] = useState(false);
@@ -39,15 +40,13 @@ function AddCategory() {
             </div>
 
             <div className='add-category__actions'>
-              <button type='submit'>Submit</button>
+              <Button type='submit' text='Submit' />
             </div>
           </form>
         </div>
       ) : (
         <div className='add-category__trigger'>
-          <button className='btn' onClick={() => setShowCategory(true)}>
-            Add category
-          </button>
+          <Button text='Add category 2' action={() => setShowCategory(true)} />
         </div>
       )}
     </div>
