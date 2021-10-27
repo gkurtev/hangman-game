@@ -4,6 +4,12 @@ export const dbFetchData = async () => {
   return data;
 };
 
+export const dbFetchSingleCategory = async (id) => {
+  const response = await fetch(`http://localhost:5000/challenges/${id}`);
+  const data = await response.json();
+  return data;
+};
+
 export const dbUpdateWords = async (wordsData, id) => {
   const response = await fetch(`http://localhost:5000/challenges/${id}`, {
     method: 'PATCH',

@@ -1,0 +1,34 @@
+/* ------------------------------------------------------------ *\
+	Play
+\* ------------------------------------------------------------ */
+
+.play__grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.play__left {
+	width: 50%;
+}
+
+.play__right {
+	width: 50%;
+}
+
+.play__middle {
+	width: 100%;
+	order: 99;
+}
+
+.letters-list ul {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.letters-list li {
+	width: 33.33%;
+}
+
+.letters--vowels ul {
+	display: block;
+}
